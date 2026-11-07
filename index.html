@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#101117">
+  <link rel="icon" href="data:,">
+  <title>Inkbound — Devil's Deal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell" aria-label="Inkbound game">
+    <canvas id="game" aria-label="A cartoon boss battle game"></canvas>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="topline"><span class="brand"><i>✦</i> INKBOUND</span><span class="chapter">CHAPTER 01 <b>·</b> THE MIDNIGHT SHOW</span><button class="sound" id="soundBtn" aria-label="Toggle sound">♫ <span>ON</span></button></header>
+    <section class="hud" id="hud" aria-label="Game status">
+      <div class="player-hud"><span class="label">PLAYER</span><div class="hearts" id="hearts">♥ ♥ ♥</div><div class="meter"><i id="superMeter"></i></div><small>SUPER</small></div>
+      <div class="boss-hud"><div class="boss-name">THE RINGLEADER <small>• ACT I</small></div><div class="boss-bar"><i id="bossHealth"></i></div></div>
+      <div class="score"><span>BEST</span><b id="score">0000</b></div>
+    </section>
+    <div class="toast" id="toast" aria-live="polite"></div>
+    <section class="overlay" id="overlay">
+      <div class="title-card">
+        <p class="eyebrow">A HAND-INKED SHOWDOWN</p>
+        <h1>INK<span>BOUND</span></h1>
+        <p class="subtitle">DEVIL'S DEAL</p>
+        <div class="ornament"><span></span> ✦ <span></span></div>
+        <p class="intro">One last act. One very bad deal.<br>Take down the Ringleader and keep your soul.</p>
+        <button id="startBtn" class="play-button">START THE SHOW <b>▶</b></button>
+        <p class="controls-hint">MOVE <b>← →</b> &nbsp; JUMP <b>SPACE</b> &nbsp; SHOOT <b>Z</b> &nbsp; DASH <b>X</b></p>
+      </div>
+    </section>
+    <section class="result hidden" id="result">
+      <div class="result-card"><p class="eyebrow" id="resultEyebrow">THE SHOW GOES ON</p><h2 id="resultTitle">CURTAIN CALL!</h2><p id="resultText">The Ringleader has been put in his place.</p><button id="againBtn" class="play-button">PLAY AGAIN <b>↻</b></button></div>
+    </section>
+    <div class="mobile-controls" id="mobileControls" aria-label="Touch controls">
+      <div class="move-pad"><button data-control="left" aria-label="Move left">◀</button><button data-control="right" aria-label="Move right">▶</button></div>
+      <div class="action-pad"><button data-control="dash" class="dash" aria-label="Dash">DASH</button><button data-control="jump" class="jump" aria-label="Jump">JUMP</button><button data-control="shoot" class="shoot" aria-label="Shoot">FIRE</button></div>
+    </div>
+    <footer class="footer"><span>✦ &nbsp; A DEAL IS A DEAL &nbsp; ✦</span><span>TIP: PARRY THE PINK NOTES</span></footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
